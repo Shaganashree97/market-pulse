@@ -17,6 +17,7 @@ Install all necessary packages:
 
 ```bash
 npm install
+npm install react-router-dom
 npm install express body-parser cors
 ```
 
