@@ -1,12 +1,74 @@
-# React + Vite
+# Market Pulse Setup Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Follow these steps to set up and run the Market Pulse project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Clone the Repository
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/yourusername/market-pulse.git
+cd market-pulse
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. Install Dependencies
+
+Install all necessary packages:
+
+```bash
+npm install
+npm install express body-parser cors
+```
+
+## 3. Start the Servers
+
+### Frontend (Vite + React)
+
+Start the Vite development server:
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Backend (Express)
+
+In a separate terminal, run:
+
+```bash
+npm run server
+```
+
+This will start the backend at [http://localhost:5000](http://localhost:5000).
+
+## 4. Using the Application
+
+- **Register:** Navigate to `/register` to create a new account.
+- **Login:** Go to `/login` to sign in. On successful login, you'll be redirected to the landing page.
+- **Navigation:** The landing page features a responsive sidebar. Use the buttons to navigate to:
+  - **Page One**
+  - **Page Two**
+  - **Page Three**
+
+## 5. Project Structure
+
+```bash
+market-pulse/
+├── package.json           # Project configuration and dependencies
+├── vite.config.js         # Vite configuration
+├── server/                # Express backend
+│   └── server.js          # API endpoints for register and login
+└── src/                   # React frontend
+    ├── main.jsx           # React entry point
+    ├── App.jsx            # App routing configuration
+    ├── index.css          # Global styles (modern, responsive)
+    └── pages/             # Application pages/components
+         ├── Login.jsx     # Login page
+         ├── Register.jsx  # Registration page
+         ├── Landing.jsx   # Landing page with sidebar navigation
+         ├── PageOne.jsx   # Navigation Page One
+         ├── PageTwo.jsx   # Navigation Page Two
+         └── PageThree.jsx # Navigation Page Three
+```
+
