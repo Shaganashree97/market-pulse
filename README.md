@@ -7,7 +7,7 @@ Follow these steps to set up and run the Market Pulse project.
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/market-pulse.git
+git clone https://github.com/Shaganashree97/market-pulse.git
 cd market-pulse
 ```
 
