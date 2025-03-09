@@ -6,17 +6,17 @@ body {
   padding: 0;
 }
 
-.auth-container, .landing-container {
-  max-width: 400px;
+.auth-container, .landing-container, .page-container {
+  max-width: 600px;
   margin: 50px auto;
   background: #fff;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.auth-container h2, .landing-container h1 {
-  text-align: center;
+.auth-container h2, .landing-container h1, .page-container h1 {
   margin-bottom: 20px;
 }
 
@@ -36,7 +36,8 @@ body {
   border-radius: 4px;
 }
 
-.auth-container form button {
+.auth-container form button,
+.landing-container button {
   width: 100%;
   padding: 10px;
   background-color: #007BFF;
@@ -44,12 +45,20 @@ body {
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.auth-container form button:hover {
+.auth-container form button:hover,
+.landing-container button:hover {
   background-color: #0056b3;
 }
 
-.auth-container p, .landing-container p {
+.auth-container p, .landing-container p, .page-container p {
   text-align: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
